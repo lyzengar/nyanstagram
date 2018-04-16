@@ -1,6 +1,8 @@
 class Cat < ApplicationRecord
     belongs_to :user
-    has_many :comments
-    has_many :likes
-    has_many :dislikes
+    has_many :comments, dependent: :destroy
+    has_many :likes, dependent: :destroy
+    has_many :dislikes, dependent: :destroy
+    has_attached_file :image, styles: { medium: "500x500>", thumb: "250x250>" }, presence: true
+    validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end

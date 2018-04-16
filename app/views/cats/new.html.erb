@@ -1,0 +1,13 @@
+<h1>New Cat</h1>
+
+<%= form_for @cat, url: cats_path, html: { multipart: true } do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+
+  <%= form.label :caption %>
+  <%= form.text_field :caption %><br>
+
+  <%= form.file_field :image %><br><br>
+
+  <%= form.submit 'Post New Cat!' %>
+<% end %>
