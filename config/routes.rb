@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :dislikes, only: [:create]
   end
   resources :users, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
   get "/login", to: "sessions#new"
 end

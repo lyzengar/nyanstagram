@@ -9,7 +9,10 @@
   </head>
 
   <body>
-    <p>
+    <nav>
+    <img></img>
+    <h1>Nyanstagram</h1>
+    <img></img>
       <% if current_user %>
         Welcome, <%= current_user.name %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -19,7 +22,7 @@
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Sign Up', new_user_path %>
       <% end %>
-    </p>
+    </nav>
     <%= yield %>
   </body>
 </html>
