@@ -14,9 +14,14 @@
  *= require_self
  */
 
+ body {
+     background-color: #E5E5E5;
+ }
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
+    color: #ec407a;
 }
 
 .nav-wrapper .nav-title {
