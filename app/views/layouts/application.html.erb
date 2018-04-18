@@ -5,23 +5,25 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <nav>
-    <img></img>
-    <h1>Nyanstagram</h1>
-    <img></img>
-      <% if current_user %>
-        Welcome, <%= current_user.name %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-      <% else %>
-        <%= link_to 'Log In', login_path %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Sign Up', new_user_path %>
-      <% end %>
+      <div class="nav-wrapper blue lighten-1">    
+        <%= link_to image_tag("nyansta_logo.png"), root_path, class: "logo" %>
+        <a href="/" class="nav-title">Nyanstagram</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if current_user %>
+            <li>Welcome, <%= current_user.name %></li>
+            <li><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'Log In', login_path %></li>
+            <li><%= link_to 'Sign Up', new_user_path %></li>
+          <% end %>
+        </ul>
+      </div>
     </nav>
     <%= yield %>
   </body>

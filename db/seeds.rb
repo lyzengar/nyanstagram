@@ -18,7 +18,7 @@ user1 = User.create({
 cat1 = Cat.new({ 
     name: "Boris", 
     caption: "Old man",
-    image: File.new("#{Rails.root}/db/seed_images/cat2.jpg")
+    image: File.new("#{Rails.root}/db/seed_images/boris.jpg")
 })
 
 # image1 = Photo.new(image: File.new("#{Rails.root}/db/seed_images/cat2.jpg"))

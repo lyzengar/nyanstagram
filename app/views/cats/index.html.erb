@@ -1,5 +1,6 @@
-<h1>Nyanstagram</h1>
 
+<div class="main">
 <% @cats.each do |cat| %>
 		<%= link_to image_tag(cat.image.url(:thumb)), cat_path(cat) %>
 <% end %>
+</div>

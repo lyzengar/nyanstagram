@@ -33,7 +33,13 @@ class CatsController < ApplicationController
     end
 
     def destroy
-
+        @cat = Cat.find(params[:id])
+        if @cat.user != current_user
+            redirect_to @cat
+        else
+            @cat.destroy
+            redirect_to root_path
+        end
     end
 
     private

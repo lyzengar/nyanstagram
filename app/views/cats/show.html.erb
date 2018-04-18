@@ -1,5 +1,16 @@
-<h1><%= @cat.name %></h1>
+<h1><%= @cat.name %> - Uploaded by <%= @cat.user.name %></h1>
 
 <%= image_tag @cat.image.url %>
 
 <p><%= @cat.caption %></p>
+
+<% if current_user == @cat.user%>
+    <%= link_to "Delete", cat_path(@cat), method: :delete %>
+<% end %>
+
+<div>
+    <%= link_to image_tag("like.jpg"), cat_likes_path(@cat), method: :post, class: "like-cat-img" %>
+    <p><%= @cat.likes.count %></p>
+    <%= link_to image_tag("dislike.jpg"), cat_dislikes_path(@cat), method: :post, class: "like-cat-img" %>
+    <p><%= @cat.dislikes.count %></p>
+</div>
