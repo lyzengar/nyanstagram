@@ -4,17 +4,20 @@
     <title>Nyanstagram</title>
     <%= csrf_meta_tags %>
 
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Chewy|Gaegu|Yeon+Sung" rel="stylesheet">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="shortcut icon" href="nyansta_logo.png" type="image/vnd.microsoft.icon"
   </head>
 
   <body>
     <nav>
       <div class="nav-wrapper cyan accent-2">    
         <%= link_to image_tag("nyansta_logo.png"), root_path, class: "logo" %>
+        <%= image_tag"like-icon.png", class: "logo" %>
         <a href="/" class="nav-title">Nyanstagram</a>
+        <%= image_tag"dislike-icon.png", class: "logo" %>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if current_user %>
             <li>Welcome, <%= current_user.name %></li>

@@ -15,9 +15,53 @@
  */
 
  body {
-     background-color: #E5E5E5;
+     /* background-color: #E5E5E5; */
      font-family: 'Gaegu', cursive;
+     width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
  }
+
+ @-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 .nav-wrapper {
     display: flex;
@@ -41,7 +85,6 @@
 
 .nav-title {
     font-family: 'Chewy', cursive;
-    margin-left: 160px;
 }
 
 .like-cat-img img {
@@ -51,9 +94,12 @@
     border: solid black 1px;
 }
 
-.logo img {
-    width: 70px;
-    
+.logo img{
+    width: 70px;  
+}
+
+.logo {
+    max-width: 60px;
 }
 
 .main {
@@ -78,6 +124,11 @@
     background-color: white;
     box-shadow: 5px 5px 4px #311b92;
     border: solid #311b92 1px;
+}
+
+.new-form textarea, .new-form input {
+    font-family: 'Gaegu', cursive;
+    font-size: 24px;
 }
 
 .field label {
@@ -112,6 +163,10 @@ h1 {
     justify-content: space-evenly;
 }
 
+.cat-pic {
+    margin: 50px;
+}
+
 .cat-pic img {
     box-shadow: 3px 3px 2px black;
     border: solid black 1px;
@@ -137,4 +192,9 @@ h1 {
 
 p {
     font-size: 24px;
+}
+
+.interact {
+    max-width: 500px;
+    margin: 50px;
 }

@@ -1,1 +1,8 @@
 <h1>Edit Comment</h1>
+
+<div class="new-form">
+    <%= form_for [@comment] do |f| %>
+        <%= f.text_area :content, rows: 3, class: "form-control", placeholder: "Please edit your comment" %>
+        <%= f.submit %>
+    <% end %>
+</div>
