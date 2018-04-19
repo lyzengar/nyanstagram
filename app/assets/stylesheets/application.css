@@ -115,6 +115,7 @@ h1 {
 .cat-pic img {
     box-shadow: 3px 3px 2px black;
     border: solid black 1px;
+    max-width: 750px;
 }
 
 .react {
