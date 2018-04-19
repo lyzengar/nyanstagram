@@ -62,6 +62,9 @@
 	}
 }
 
+.cat-pic a, .comments a {
+    color: #311b92;
+}
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
