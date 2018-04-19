@@ -1,16 +1,44 @@
 <h1><%= @cat.name %> - Uploaded by <%= @cat.user.name %></h1>
 
-<%= image_tag @cat.image.url %>
+<div class="cat-page">
+<div class="cat-pic">
+    <%= image_tag @cat.image.url %>
 
-<p><%= @cat.caption %></p>
-
-<% if current_user == @cat.user%>
-    <%= link_to "Delete", cat_path(@cat), method: :delete %>
-<% end %>
-
-<div>
-    <%= link_to image_tag("like.jpg"), cat_likes_path(@cat), method: :post, class: "like-cat-img" %>
-    <p><%= @cat.likes.count %></p>
-    <%= link_to image_tag("dislike.jpg"), cat_dislikes_path(@cat), method: :post, class: "like-cat-img" %>
-    <p><%= @cat.dislikes.count %></p>
+    <p><%= @cat.caption %></p>
+    <% if current_user == @cat.user%>
+        <%= link_to "Delete", cat_path(@cat), method: :delete %>
+    <% end %>
 </div>
+    <div class="interact">
+        <div class="react">
+            <div class="like">
+                <%= link_to image_tag("like.jpg"), cat_likes_path(@cat), method: :post, class: "like-cat-img" %>
+                <p><%= @cat.likes.count %></p>
+            </div>
+            <div class="like">
+                <%= link_to image_tag("dislike.jpg"), cat_dislikes_path(@cat), method: :post, class: "like-cat-img" %>
+                <p><%= @cat.dislikes.count %></p>
+            </div>
+        </div>
+
+        <div class="comments">
+
+        
+
+        <% @cat.comments.each do |comment| %>
+            <div><%=  comment.user.name %> (<%=  comment.created_at.strftime("%m %d %Y") %>):<%= comment.content %></div>
+            <% if current_user == @comment.user%>
+                <%= link_to "Delete", cat_path(@comment), method: :delete %>
+            <% end %>
+        <% end %>
+
+        <div class="new-comment">
+            <%= form_for [@cat, @comment] do |f| %>
+                <%= f.text_area :content, rows: 3, class: "form-control", placeholder: "Please enter a comment" %>
+                <%= f.submit %>
+            <% end %>
+        </div>
+        </div>
+    </div>
+</div>
+

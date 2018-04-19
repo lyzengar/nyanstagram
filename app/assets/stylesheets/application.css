@@ -16,12 +16,14 @@
 
  body {
      background-color: #E5E5E5;
+     font-family: 'Gaegu', cursive;
  }
 
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     color: #ec407a;
+    font-size: 20px;
 }
 
 .nav-wrapper .nav-title {
@@ -30,15 +32,23 @@
 
 .nav-wrapper a {
     color: #311b92;
+    font-size: 20px;
 }
 
 .nav-wrapper img {
     margin-top: 6px;
 }
 
+.nav-title {
+    font-family: 'Chewy', cursive;
+    margin-left: 160px;
+}
+
 .like-cat-img img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 1px black;
+    border: solid black 1px;
 }
 
 .logo img {
@@ -56,4 +66,74 @@
 .main img {
     margin: 50px;
     height: 250px;
+    box-shadow: 3px 3px 2px black;
+    border: solid black 1px;
+}
+
+.new-form {
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 4px #311b92;
+    border: solid #311b92 1px;
+}
+
+.field label {
+    font-size: 24px;
+}
+
+.new_cat label {
+    font-size: 24px;
+}
+
+.actions input {
+    font-family: 'Gaegu', cursive;
+    font-size: 24px;
+}
+
+.new_cat input {
+    font-family: 'Gaegu', cursive;
+    font-size: 24px;
+}
+
+h1 {
+    text-align: center;
+    color: #311b92;
+}
+
+#alert {
+    text-align: center;
+}
+
+.cat-page {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cat-pic img {
+    box-shadow: 3px 3px 2px black;
+    border: solid black 1px;
+}
+
+.react {
+    display: flex;
+}
+
+.like {
+    margin-right: 40px;
+    text-align: center;
+}
+
+.comments {
+    font-size: 24px;
+}
+
+.new-comment textarea, .new-comment input {
+    font-family: 'Gaegu', cursive;
+}
+
+p {
+    font-size: 24px;
 }

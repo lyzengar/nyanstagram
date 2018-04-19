@@ -6,6 +6,7 @@ class CatsController < ApplicationController
 
     def new
         @cat = Cat.new
+
     end
 
     def create
@@ -26,6 +27,7 @@ class CatsController < ApplicationController
 
     def show
         @cat = Cat.find(params[:id])
+        @comment = Comment.new
     end
 
     def update
