@@ -17,6 +17,7 @@ Nyanstagram is a social media app where users can upload pictures of cats as wel
 * Materialize CSS Framework
 * Paperclip Gem
 * Amazon Web Services
+* Heroku
 
 # Unsolved Problems
 * Strange horizontal picture
