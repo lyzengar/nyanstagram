@@ -21,8 +21,5 @@ cat1 = Cat.new({
     image: File.new("#{Rails.root}/db/seed_images/boris.jpg")
 })
 
-# image1 = Photo.new(image: File.new("#{Rails.root}/db/seed_images/cat2.jpg"))
-
 User.first.cats << cat1
-# User.first.cats.first.photos << image1
 

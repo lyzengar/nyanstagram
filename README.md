@@ -14,29 +14,12 @@ Nyanstagram is a social media app where users can upload pictures of cats as wel
 * Amazon Web Services
 
 # Unsolved Problems
+* Strange horizontal picture
 
+# Future Plans
+* Admin user
+* User pages
 
 # Links
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[GitHub](https://github.com/lyzengar/nyanstagram)  
+[Nyanstagram](https://nyanstagram.herokuapp.com/)
