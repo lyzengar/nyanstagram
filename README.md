@@ -4,6 +4,11 @@
 
 Nyanstagram is a social media app where users can upload pictures of cats as well as comment on and react to other users' cats.
 
+# Getting Started
+[Nyanstagram](https://nyanstagram.herokuapp.com/)  
+[GitHub](https://github.com/lyzengar/nyanstagram)  
+[Trello](https://trello.com/b/avByFBlY/project-2)
+
 # Technologies Used
 * HTML
 * CSS
@@ -20,6 +25,3 @@ Nyanstagram is a social media app where users can upload pictures of cats as wel
 * Admin user
 * User pages
 
-# Links
-[GitHub](https://github.com/lyzengar/nyanstagram)  
-[Nyanstagram](https://nyanstagram.herokuapp.com/)
