@@ -6,13 +6,10 @@ class CatsController < ApplicationController
 
     def new
         @cat = Cat.new
-
     end
 
     def create
         @cat = Cat.new(cat_params)
-
-
         if !(current_user.nil?)
             current_user.cats << @cat
             redirect_to cats_path
